@@ -2,13 +2,12 @@
 #include <stdint.h>
 
 #include "math.h"
-
-#define VERSION (10)
+#include "version.h"
 
 int main()
 {
    printf("Hello!\r\n");
-   printf("Version: %d\r\n", VERSION);
+   printf("Version: %d\r\n", SW_VERSION);
 
    const uint16_t a = 15;
    const uint16_t b = 16;

@@ -1529,7 +1529,7 @@
                 </option>
                 <option>
                     <name>MemFile</name>
-                    <state></state>
+                    <state>$TOOLKIT_DIR$\CONFIG\debugger\ST\STM32F405RG.ddf</state>
                 </option>
                 <option>
                     <name>RunToEnable</name>
@@ -1569,11 +1569,11 @@
                 </option>
                 <option>
                     <name>OCDynDriverList</name>
-                    <state>ARMSIM_ID</state>
+                    <state>IJET_ID</state>
                 </option>
                 <option>
                     <name>OCLastSavedByProductVersion</name>
-                    <state></state>
+                    <state>8.40.2.22864</state>
                 </option>
                 <option>
                     <name>UseFlashLoader</name>
@@ -1597,7 +1597,7 @@
                 </option>
                 <option>
                     <name>FlashLoadersV3</name>
-                    <state></state>
+                    <state>$TOOLKIT_DIR$\config\flashloader\ST\FlashSTM32F4xxx.board</state>
                 </option>
                 <option>
                     <name>OCImagesSuppressCheck1</name>
@@ -1665,7 +1665,7 @@
                 </option>
                 <option>
                     <name>OCMulticoreNrOfCores</name>
-                    <state></state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>OCMulticoreWorkspace</name>
@@ -1997,7 +1997,7 @@
                 <option>
                     <name>IjetResetList</name>
                     <version>1</version>
-                    <state>10</state>
+                    <state>9</state>
                 </option>
                 <option>
                     <name>IjetHWResetDuration</name>
@@ -2025,7 +2025,7 @@
                 </option>
                 <option>
                     <name>IjetInterfaceRadio</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IjetInterfaceCmdLine</name>
@@ -2054,7 +2054,7 @@
                 </option>
                 <option>
                     <name>IjetProtocolRadio</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IjetSwoPin</name>
@@ -2171,7 +2171,7 @@
                 </option>
                 <option>
                     <name>IjetSelectedCPUBehaviour</name>
-                    <state>0</state>
+                    <state></state>
                 </option>
                 <option>
                     <name>ICpuName</name>
