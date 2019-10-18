@@ -4,6 +4,7 @@
 **/Release
 **/UnitTest
 **/IntegrationTest
+*.dep
 
 # C
 *.o
