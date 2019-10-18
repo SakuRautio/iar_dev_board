@@ -3,6 +3,6 @@
 
 import json
 
-def getConfig() -> dict:
-	with open('./scripts/config.json', 'r') as configFile:
-		return json.loads(configFile)
+configDict = dict()
+with open('./CI_scripts/config.json', 'r') as configFile:
+	configDict = json.load(configFile)

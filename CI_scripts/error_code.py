@@ -9,3 +9,6 @@ class ErrorCode(Enum):
 	OK = 0
 	NOT_IMPLEMENTED = 1
 	INCORRECT_PARAMETERS = 2
+	IAR_FAIL = 3
+	OS_FAIL = 4
+	GIT_FAIL = 5
