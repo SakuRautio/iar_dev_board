@@ -1,0 +1,37 @@
+/*-Memory Regions-*/
+define symbol BOOTROM_start    = 0x08000000;
+define symbol APPROM_start     = 0x08004000;
+define symbol APPROM_end       = 0x0801FFFF;
+
+define symbol RAM_start        = 0x20000000;
+define symbol RAM_end          = 0x2001BFFF;
+
+/*-Sizes-*/
+define symbol size_cstack      = 0x800;
+define symbol size_heap        = 0x800;
+
+export symbol APPROM_start;
+
+define memory mem with size = 4G;
+define region BOOTROM_region  = mem:[from BOOTROM_start to (APPROM_start-1)];
+define region APPROM_region   = mem:[from APPROM_start to APPROM_end];
+define region RAM_region      = mem:[from RAM_start     to  RAM_end];
+
+define block CSTACK    with alignment = 8, size = size_cstack{ };
+define block HEAP      with alignment = 8, size = size_heap  { };
+
+initialize by copy { readwrite };
+do not initialize  { section .noinit };
+
+"APP_INTVECT": place at address mem:APPROM_start{ readonly section .intvec };
+
+"APP_ROM": place in APPROM_region   { readonly };
+"APP_RAM": place in RAM_region      { readwrite,
+                           block CSTACK, block HEAP };
+
+define symbol EEPROM_start = 0x08080000;
+define symbol EEPROM_end   = 0x08080FFF;
+define region EEPROM_region = mem:[from EEPROM_start to EEPROM_end];
+
+"APP_EEPROM": place in EEPROM_region  { section .eeprom };
+                        

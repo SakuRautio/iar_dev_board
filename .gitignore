@@ -1,0 +1,14 @@
+# IAR
+**/settings
+**/Debug
+**/Release
+**/UnitTest
+**/IntegrationTest
+
+# C
+*.o
+*.a
+*.out
+*.bin
+*.hex
+*.txt
