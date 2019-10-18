@@ -2374,4 +2374,7 @@
     <file>
         <name>$PROJ_DIR$\main.c</name>
     </file>
+    <file>
+        <name>$PROJ_DIR$\math.c</name>
+    </file>
 </project>

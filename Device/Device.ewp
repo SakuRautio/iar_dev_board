@@ -816,7 +816,7 @@
                 </option>
                 <option>
                     <name>IlinkAdditionalLibs</name>
-                    <state>$PROJ_DIR$\..\Library\Library.a</state>
+                    <state>$PROJ_DIR$\Library.a</state>
                 </option>
                 <option>
                     <name>IlinkOverrideProgramEntryLabel</name>
@@ -2115,5 +2115,8 @@
     </configuration>
     <file>
         <name>$PROJ_DIR$\main.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\math.c</name>
     </file>
 </project>

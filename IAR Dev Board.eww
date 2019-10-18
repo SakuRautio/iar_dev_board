@@ -3,8 +3,5 @@
     <project>
         <path>$WS_DIR$\Device\Device.ewp</path>
     </project>
-    <project>
-        <path>$WS_DIR$\Library\LibraryProject\STM32F4-Discovery\Library.ewp</path>
-    </project>
     <batchBuild />
 </workspace>
