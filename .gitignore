@@ -12,3 +12,10 @@
 *.bin
 *.hex
 *.txt
+
+#VS
+.vs
+
+#Python
+**/__pycache__
+version.h
