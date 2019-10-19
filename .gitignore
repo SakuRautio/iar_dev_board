@@ -1,12 +1,11 @@
-# IAR
+# IAR #
 **/settings
 **/Debug
 **/Release
 **/UnitTest
-**/IntegrationTest
 *.dep
 
-# C
+# C #
 *.o
 *.a
 *.out
@@ -14,9 +13,9 @@
 *.hex
 *.txt
 
-#VS
+# VS #
 .vs
 
-#Python
+# Python #
 **/__pycache__
 version.h

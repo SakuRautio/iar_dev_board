@@ -32,11 +32,11 @@
                 </option>
                 <option>
                     <name>Input description</name>
-                    <state>Full formatting, without multibyte support.</state>
+                    <state>Full formatting, with multibyte support.</state>
                 </option>
                 <option>
                     <name>Output description</name>
-                    <state>Full formatting, without multibyte support.</state>
+                    <state>Full formatting, with multibyte support.</state>
                 </option>
                 <option>
                     <name>GOutputBinary</name>
@@ -62,7 +62,7 @@
                 </option>
                 <option>
                     <name>OGProductVersion</name>
-                    <state>5.10.0.159</state>
+                    <state>4.41A</state>
                 </option>
                 <option>
                     <name>OGLastSavedByProductVersion</name>
@@ -108,7 +108,7 @@
                 <option>
                     <name>GeneralMisraRules04</name>
                     <version>0</version>
-                    <state>111101110010111111111000110111111111111111111111111110010111101111010101111111111111111111111111101111111011111001111011111011111111111111111</state>
+                    <state>011111111111111110111111111111011111111111111011110100111111111111111111111111111111111111111111101111111111111011111111111111111111111111111</state>
                 </option>
                 <option>
                     <name>RTConfigPath2</name>
@@ -177,7 +177,7 @@
                 </option>
                 <option>
                     <name>OGPrintfMultibyteSupport</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>OGScanfVariant</name>
@@ -186,7 +186,7 @@
                 </option>
                 <option>
                     <name>OGScanfMultibyteSupport</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>GenLocaleTags</name>
@@ -224,6 +224,8 @@
                 </option>
                 <option>
                     <name>CCDefines</name>
+                    <state>USE_HAL_DRIVER</state>
+                    <state>STM32F405xx</state>
                     <state>DEBUG</state>
                 </option>
                 <option>
@@ -285,7 +287,7 @@
                 <option>
                     <name>CCAllowList</name>
                     <version>1</version>
-                    <state>00000000</state>
+                    <state>11111110</state>
                 </option>
                 <option>
                     <name>CCDebugInfo</name>
@@ -349,7 +351,13 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state>$PROJ_DIR$\..\</state>
+                    <state>$PROJ_DIR$</state>
+                    <state>$PROJ_DIR$/..</state>
+                    <state>$PROJ_DIR$/Inc</state>
+                    <state>$PROJ_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc</state>
+                    <state>$PROJ_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy</state>
+                    <state>$PROJ_DIR$/Drivers/CMSIS/Device/ST/STM32F4xx/Include</state>
+                    <state>$PROJ_DIR$/Drivers/CMSIS/Include</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -365,16 +373,16 @@
                 </option>
                 <option>
                     <name>CCOptLevel</name>
-                    <state>1</state>
+                    <state>3</state>
                 </option>
                 <option>
                     <name>CCOptStrategy</name>
                     <version>0</version>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>CCOptLevelSlave</name>
-                    <state>1</state>
+                    <state>3</state>
                 </option>
                 <option>
                     <name>CompilerMisraRules98</name>
@@ -412,7 +420,7 @@
                 </option>
                 <option>
                     <name>IccStaticDestr</name>
-                    <state>1</state>
+                    <state>0</state>
                 </option>
                 <option>
                     <name>IccCppInlineSemantics</name>
@@ -433,7 +441,7 @@
                 <option>
                     <name>CCOptStrategySlave</name>
                     <version>0</version>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>CCGuardCalls</name>
@@ -691,10 +699,6 @@
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
-                    <name>IlinkOutputFile</name>
-                    <state>$PROJ_FNAME$.out</state>
-                </option>
-                <option>
                     <name>IlinkLibIOConfig</name>
                     <state>1</state>
                 </option>
@@ -705,6 +709,10 @@
                 <option>
                     <name>IlinkInputFileSlave</name>
                     <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkOutputFile</name>
+                    <state>Device.out</state>
                 </option>
                 <option>
                     <name>IlinkDebugInfoEnable</name>
@@ -768,7 +776,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>$PROJ_DIR$\config\stm32f405xx_flash(app).icf</state>
+                    <state>$PROJ_DIR$/stm32f405xx_flash.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -816,7 +824,7 @@
                 </option>
                 <option>
                     <name>IlinkAdditionalLibs</name>
-                    <state>$PROJ_DIR$\Library.a</state>
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkOverrideProgramEntryLabel</name>
@@ -1051,11 +1059,6 @@
             <archiveVersion>0</archiveVersion>
             <data />
         </settings>
-        <settings>
-            <name>Coder</name>
-            <archiveVersion>0</archiveVersion>
-            <data />
-        </settings>
     </configuration>
     <configuration>
         <name>Release</name>
@@ -1088,11 +1091,11 @@
                 </option>
                 <option>
                     <name>Input description</name>
-                    <state>Full formatting, without multibyte support.</state>
+                    <state>Full formatting, with multibyte support.</state>
                 </option>
                 <option>
                     <name>Output description</name>
-                    <state>Full formatting, without multibyte support.</state>
+                    <state>Full formatting, with multibyte support.</state>
                 </option>
                 <option>
                     <name>GOutputBinary</name>
@@ -1118,7 +1121,7 @@
                 </option>
                 <option>
                     <name>OGProductVersion</name>
-                    <state>5.10.0.159</state>
+                    <state>4.41A</state>
                 </option>
                 <option>
                     <name>OGLastSavedByProductVersion</name>
@@ -1164,7 +1167,7 @@
                 <option>
                     <name>GeneralMisraRules04</name>
                     <version>0</version>
-                    <state>111101110010111111111000110111111111111111111111111110010111101111010101111111111111111111111111101111111011111001111011111011111111111111111</state>
+                    <state>011111111111111110111111111111011111111111111011110100111111111111111111111111111111111111111111101111111111111011111111111111111111111111111</state>
                 </option>
                 <option>
                     <name>RTConfigPath2</name>
@@ -1233,7 +1236,7 @@
                 </option>
                 <option>
                     <name>OGPrintfMultibyteSupport</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>OGScanfVariant</name>
@@ -1242,7 +1245,7 @@
                 </option>
                 <option>
                     <name>OGScanfMultibyteSupport</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>GenLocaleTags</name>
@@ -1280,7 +1283,8 @@
                 </option>
                 <option>
                     <name>CCDefines</name>
-                    <state></state>
+                    <state>USE_HAL_DRIVER</state>
+                    <state>STM32F405xx</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -1341,7 +1345,7 @@
                 <option>
                     <name>CCAllowList</name>
                     <version>1</version>
-                    <state>00000000</state>
+                    <state>11111110</state>
                 </option>
                 <option>
                     <name>CCDebugInfo</name>
@@ -1405,7 +1409,13 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state>$PROJ_DIR$\..\</state>
+                    <state>$PROJ_DIR$</state>
+                    <state>$PROJ_DIR$/..</state>
+                    <state>$PROJ_DIR$/Inc</state>
+                    <state>$PROJ_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc</state>
+                    <state>$PROJ_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy</state>
+                    <state>$PROJ_DIR$/Drivers/CMSIS/Device/ST/STM32F4xx/Include</state>
+                    <state>$PROJ_DIR$/Drivers/CMSIS/Include</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -1421,16 +1431,16 @@
                 </option>
                 <option>
                     <name>CCOptLevel</name>
-                    <state>1</state>
+                    <state>3</state>
                 </option>
                 <option>
                     <name>CCOptStrategy</name>
                     <version>0</version>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>CCOptLevelSlave</name>
-                    <state>1</state>
+                    <state>3</state>
                 </option>
                 <option>
                     <name>CompilerMisraRules98</name>
@@ -1468,7 +1478,7 @@
                 </option>
                 <option>
                     <name>IccStaticDestr</name>
-                    <state>1</state>
+                    <state>0</state>
                 </option>
                 <option>
                     <name>IccCppInlineSemantics</name>
@@ -1489,7 +1499,7 @@
                 <option>
                     <name>CCOptStrategySlave</name>
                     <version>0</version>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>CCGuardCalls</name>
@@ -1747,10 +1757,6 @@
                 <wantNonLocal>1</wantNonLocal>
                 <debug>0</debug>
                 <option>
-                    <name>IlinkOutputFile</name>
-                    <state>$PROJ_FNAME$.out</state>
-                </option>
-                <option>
                     <name>IlinkLibIOConfig</name>
                     <state>1</state>
                 </option>
@@ -1761,6 +1767,10 @@
                 <option>
                     <name>IlinkInputFileSlave</name>
                     <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkOutputFile</name>
+                    <state>Device.out</state>
                 </option>
                 <option>
                     <name>IlinkDebugInfoEnable</name>
@@ -1824,7 +1834,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>$PROJ_DIR$\config\stm32f405xx_flash(app).icf</state>
+                    <state>$PROJ_DIR$/stm32f405xx_flash.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -1872,7 +1882,7 @@
                 </option>
                 <option>
                     <name>IlinkAdditionalLibs</name>
-                    <state>$PROJ_DIR$\Library.a</state>
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkOverrideProgramEntryLabel</name>
@@ -2107,16 +2117,98 @@
             <archiveVersion>0</archiveVersion>
             <data />
         </settings>
-        <settings>
-            <name>Coder</name>
-            <archiveVersion>0</archiveVersion>
-            <data />
-        </settings>
     </configuration>
-    <file>
-        <name>$PROJ_DIR$\main.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\math.c</name>
-    </file>
+    <group>
+        <name>Application</name>
+        <group>
+            <name>EWARM</name>
+            <file>
+                <name>$PROJ_DIR$\startup_stm32f405xx.s</name>
+            </file>
+        </group>
+        <group>
+            <name>User</name>
+            <file>
+                <name>$PROJ_DIR$\Src\gpio.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Src\main.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Src\math.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Src\stm32f4xx_hal_msp.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Src\stm32f4xx_it.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Src\sys.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Src\usart.c</name>
+            </file>
+        </group>
+    </group>
+    <group>
+        <name>Drivers</name>
+        <group>
+            <name>CMSIS</name>
+            <file>
+                <name>$PROJ_DIR$\Src\system_stm32f4xx.c</name>
+            </file>
+        </group>
+        <group>
+            <name>STM32F4xx_HAL_Driver</name>
+            <file>
+                <name>$PROJ_DIR$\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.c</name>
+            </file>
+        </group>
+    </group>
 </project>
