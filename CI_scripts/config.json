@@ -22,12 +22,6 @@
     "release": {
       "Build": [
         "Device"
-      ],
-      "Static analysis": [
-        "Device"
-      ],
-      "Unit test": [
-        "Device"
       ]
     }
   }
