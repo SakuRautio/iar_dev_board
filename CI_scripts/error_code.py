@@ -7,8 +7,9 @@ from enum import Enum, auto, unique
 class ErrorCode(Enum):
 	WTF = -1
 	OK = 0
-	NOT_IMPLEMENTED = 1
-	INCORRECT_PARAMETERS = 2
-	IAR_FAIL = 3
-	OS_FAIL = 4
-	GIT_FAIL = 5
+	NOT_IMPLEMENTED = auto()
+	INCORRECT_PARAMETERS = auto()
+	IAR_FAIL = auto()
+	OS_FAIL = auto()
+	GIT_FAIL = auto()
+	PARSE_FAIL = auto()

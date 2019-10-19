@@ -32,6 +32,10 @@
 #include <stdio.h>
 #endif
 
+#if UNIT_TEST
+#include "unit_tests.h"
+#endif
+
 #include "version.h"
 #include "math.h"
 /* USER CODE END Includes */
@@ -74,6 +78,21 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
+#if UNIT_TEST
+  int status = unit_tests_init();
+  if (status)
+  {
+     return status;
+  }
+  
+  status = unit_tests_run();
+  if (status)
+  {
+     return status;
+  }
+  
+  return 0;
+#else
   const uint16_t a = 15;
   const uint16_t b = 16;
   const uint16_t c = 17;
@@ -129,6 +148,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+#endif /* UNIT_TEST */
   /* USER CODE END 3 */
 }
 

@@ -1,11 +1,11 @@
 {
   "IAR_BUILD_PATH": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\common\\bin\\IarBuild.exe",
-  "IAR_CSTAT_PATH": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\arm\\bin\\icstat.exe",
   "IAR_CSPY_PATH": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\common\\bin\\CSpyBat.exe",
   "Build backup path": "C:\\Builds",
   "Configurations": [
     "Debug",
-    "Release"
+    "Release",
+    "UnitTest"
   ],
   "Branches": {
     "development": {
@@ -14,6 +14,9 @@
       ],
       "Static analysis": [
         "Device"
+      ],
+      "Unit test": [
+        "Device"
       ]
     },
     "release": {
@@ -21,6 +24,9 @@
         "Device"
       ],
       "Static analysis": [
+        "Device"
+      ],
+      "Unit test": [
         "Device"
       ]
     }
