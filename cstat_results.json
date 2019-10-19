@@ -1,0 +1,15 @@
+{
+  "Timestamp": "2019-10-19_23-53-16",
+  "Analysises": [
+    {
+      "Project": "Device",
+      "Configuration": "Debug",
+      "Warnings": []
+    },
+    {
+      "Project": "Device",
+      "Configuration": "Release",
+      "Warnings": []
+    }
+  ]
+}

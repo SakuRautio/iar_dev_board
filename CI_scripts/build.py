@@ -57,13 +57,15 @@ def backupProject(project: str, configuration: str) -> ErrorCode:
 		except:
 			print("Could not create directory {0}".format(buildBackupPath))
 			return ErrorCode.OS_FAIL
-	buildBackupPath = os.path.join(buildBackupPath, datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S"))
-	if (not os.path.exists(buildBackupPath)):
-		try:
-			os.makedirs(buildBackupPath)
-		except:
-			print("Could not create directory {0}".format(buildBackupPath))
-			return ErrorCode.OS_FAIL
+	if (os.path.exists(os.path.join(buildBackupPath, binaryPath.rsplit('\\')[-1]))):
+		buildBackupPath = os.path.join(buildBackupPath, 'temp')
+		buildBackupPath = os.path.join(buildBackupPath, datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S"))
+		if (not os.path.exists(buildBackupPath)):
+			try:
+				os.makedirs(buildBackupPath)
+			except:
+				print("Could not create directory {0}".format(buildBackupPath))
+				return ErrorCode.OS_FAIL
 	print("Copying binary to {0}".format(buildBackupPath))
 	shutil.copy2(binaryPath, buildBackupPath)
 	return ErrorCode.OK

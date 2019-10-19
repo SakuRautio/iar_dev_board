@@ -11,10 +11,16 @@
     "development": {
       "Build": [
         "Device"
+      ],
+      "Static analysis": [
+        "Device"
       ]
     },
     "release": {
       "Build": [
+        "Device"
+      ],
+      "Static analysis": [
         "Device"
       ]
     }
