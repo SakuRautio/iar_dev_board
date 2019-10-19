@@ -35,36 +35,37 @@ def backupProject(project: str, configuration: str) -> ErrorCode:
 	if (latestTag == ""):
 		return ErrorCode.WTF
 	binaryPath = r"{0}\{1}\Exe\{0}.bin".format(project, configuration)
-	buildPath = config.configDict["Build output path"]
-	buildPath = os.path.join(buildPath, latestTag)
-	if (not os.path.exists(buildPath)):
+	buildBackupPath = config.configDict["Build backup path"]
+	buildBackupPath = os.path.join(buildBackupPath, latestTag)
+	if (not os.path.exists(buildBackupPath)):
 		try:
-			os.makedirs(buildPath)
+			os.makedirs(buildBackupPath)
 		except:
-			print("Could not create directory {0}".format(buildPath))
+			print("Could not create directory {0}".format(buildBackupPath))
 			return ErrorCode.OS_FAIL
-	buildPath = os.path.join(buildPath, project)
-	if (not os.path.exists(buildPath)):
+	buildBackupPath = os.path.join(buildBackupPath, project)
+	if (not os.path.exists(buildBackupPath)):
 		try:
-			os.makedirs(buildPath)
+			os.makedirs(buildBackupPath)
 		except:
-			print("Could not create directory {0}".format(buildPath))
+			print("Could not create directory {0}".format(buildBackupPath))
 			return ErrorCode.OS_FAIL
-	buildPath = os.path.join(buildPath, configuration)
-	if (not os.path.exists(buildPath)):
+	buildBackupPath = os.path.join(buildBackupPath, configuration)
+	if (not os.path.exists(buildBackupPath)):
 		try:
-			os.makedirs(buildPath)
+			os.makedirs(buildBackupPath)
 		except:
-			print("Could not create directory {0}".format(buildPath))
+			print("Could not create directory {0}".format(buildBackupPath))
 			return ErrorCode.OS_FAIL
-	buildPath = os.path.join(buildPath, datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S"))
-	if (not os.path.exists(buildPath)):
+	buildBackupPath = os.path.join(buildBackupPath, datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S"))
+	if (not os.path.exists(buildBackupPath)):
 		try:
-			os.makedirs(buildPath)
+			os.makedirs(buildBackupPath)
 		except:
-			print("Could not create directory {0}".format(buildPath))
+			print("Could not create directory {0}".format(buildBackupPath))
 			return ErrorCode.OS_FAIL
-	shutil.copy2(binaryPath, buildPath)
+	print("Copying binary to {0}".format(buildBackupPath))
+	shutil.copy2(binaryPath, buildBackupPath)
 	return ErrorCode.OK
 
 def main() -> ErrorCode:

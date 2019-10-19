@@ -46,7 +46,8 @@ def getLatestTag() -> str:
 		return ""
 	if (len(process.stdout) < 0):
 		return ""
-	tags = list(map(lambda x: x.replace('\r','').replace('\n',''), process.stdout.split("\r\n")))
+	tags = process.stdout.split('\n')
+	tags = list(filter(lambda x: x != '', tags))
 	tags = list(filter(lambda x: x.rsplit('-')[-1] == branch, tags))
 	print("Tags: {0}".format(tags))
 	return tags[-1]
