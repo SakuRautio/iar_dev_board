@@ -19,3 +19,5 @@
 # Python #
 **/__pycache__
 version.h
+cstat_results.json
+unit_tests_results.json
