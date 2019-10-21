@@ -40,15 +40,18 @@ def getAnalysisData(project: str, configuration: str) -> dict:
 	data = dict()
 	data["Project"] = project
 	data["Configuration"] = configuration
-	data["Warnings"] = list()
+	warnings = list()
 	for row in cursor.fetchall():
-		data["Warnings"]["warning_id"] = row[0]
-		data["Warnings"]["property_id"] = row[1]
-		data["Warnings"]["file_name"] = row[2]
-		data["Warnings"]["line_num"] = row[3]
-		data["Warnings"]["column_num"] = row[4]
-		data["Warnings"]["msg"] = row[5]
-		data["Warnings"]["severity"] = row[6]
+		warning = dict()
+		warning["warning_id"] = row[0]
+		warning["property_id"] = row[1]
+		warning["file_name"] = row[2]
+		warning["line_num"] = row[3]
+		warning["column_num"] = row[4]
+		warning["msg"] = row[5]
+		warning["severity"] = row[6]
+		warnings.append(warning)
+	data["Warnings"] = warnings
 	connection.close()
 	return data
 
